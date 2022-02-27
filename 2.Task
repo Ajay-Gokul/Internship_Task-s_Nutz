@@ -1,0 +1,50 @@
+package task2;
+import java.util.Scanner;
+class Task2 
+{
+  public static void main(String args[])
+  {
+	  Scanner sc=new Scanner(System.in); 
+	  String username="Ajay";
+	  String password="ajay2001";
+      System.out.print("Enter username=");
+      String username_check=sc.nextLine();
+      System.out.print("Enter password=");
+      String password_check=sc.nextLine();
+      if(username.equals(username_check) && password.equals(password_check))
+      {
+    	  System.out.println("Login successful");
+    	  System.out.println("Hi " + username + " welcome!");
+      }
+      else
+      {
+    	  System.out.println("Login unsuccessful");
+    	  System.out.println("Check the password and try again");
+    	  System.exit(1);
+      }
+      System.out.println("As a next step change your password as it is necessary");
+      System.out.println("Note:- Your new password shouldn't match the old one");
+      System.out.print("Enter your new password=");
+      String new_password=sc.nextLine();
+      if(new_password.equals(password))
+      {
+    	System.out.println("Error:- Your new password is same as the old one please change it");  
+      }
+      else
+      {
+    	System.out.println("Password changed successfully");  
+      }
+      password=new_password; 
+  }
+}
+
+OUTPUT:-
+
+Enter username=Ajay
+Enter password=ajay2001
+Login successful
+Hi Ajay welcome!
+As a next step change your password as it is necessary
+Note:- Your new password shouldn't match the old one
+Enter your new password=gokul2001
+Password changed successfully
