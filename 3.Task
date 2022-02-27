@@ -1,0 +1,20 @@
+Python
+
+import json
+
+detailsforjson=["Name","Age","Address:{Street, City, Pincode}","DOB"]
+dictforjson={}
+for key in detailsforjson:
+    input_detail=input("Enter your " + key + "= ")
+    dictforjson[key]=input_detail
+
+Data=json.dumps(dictforjson)
+print(Data)    
+
+OUTPUT:-
+ 
+Enter your Name= Ajay
+Enter your Age= 20
+Enter your Address:{Street, City, Pincode}= Periyar Salai, Erode, 638 009
+Enter your DOB= 24/11/2001
+{"Name": "Ajay", "Age": "20", "Address:{Street, City, Pincode}": "Periyar Salai, Erode, 638 009", "DOB": "24/11/2001"}
