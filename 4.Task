@@ -1,0 +1,26 @@
+Python
+
+//Creating a file
+
+f=open("demofile.txt","w")
+f.write("File created successfully")
+f.close()
+
+//Accessing the file
+
+import os.path, time
+f_name, f_ext = os.path.splitext("demofile.py")
+f_size = os.path.getsize("demofile.py") 
+print("File name=", f_name)
+print("Modified Date=%s"%time.ctime(os.path.getmtime("demofile.py")))
+print("Created Date=%s"%time.ctime(os.path.getctime("demofile.py")))
+print("File type=", f_ext)
+print("File Size=", f_size)
+
+OUTPUT:-
+
+File name= demofile
+Modified Date=Sun Feb 27 14:58:52 2022
+Created Date=Sun Feb 27 13:57:52 2022
+File type= .py
+File Size= 75
